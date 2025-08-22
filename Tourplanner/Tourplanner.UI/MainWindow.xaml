@@ -1,0 +1,75 @@
+﻿<Window x:Class="Views.Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="clr-namespace:Views.Controls"
+        Title="Tourplanner" Width="1080" SizeToContent="Height">
+
+    <Grid Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="4*"/>
+
+        </Grid.ColumnDefinitions>
+        <Menu Grid.Row="0" Grid.ColumnSpan="2">
+            <Menu.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel Orientation="Horizontal"/>
+                </ItemsPanelTemplate>
+            </Menu.ItemsPanel>
+            <MenuItem Header="_File">
+                <MenuItem Header="Save" Command="{Binding MenuSaveClicked}"/>
+                <MenuItem Header="Save and Exit" Command="{Binding MenuExitClicked}"/>
+                <Separator/>
+                <MenuItem Header="Export" Command="{Binding MenuExportClicked}"/>
+                <MenuItem Header="Import" Command="{Binding MenuImportClicked}"/>
+            </MenuItem>
+            <MenuItem Header="_Tours">
+                <MenuItem Header="Add" Command="{Binding MenuAddTourClicked}"/>
+                <MenuItem Header="Remove" Command="{Binding MenuRemoveTourClicked}"/>
+            </MenuItem>
+            <MenuItem Header="_Logs">
+                <MenuItem Header="Add" Command="{Binding MenuAddLogEntryClicked}"/>
+                <MenuItem Header="Remove" Command="{Binding MenuRemoveLogEntryClicked}"/>
+            </MenuItem>
+            <MenuItem Header="_Report">
+                <MenuItem Header="Create Tour Report" Command="{Binding MenuReportClicked}"/>
+                <MenuItem Header="Create Summary" Command="{Binding MenuSummaryClicked}"/>
+            </MenuItem>
+            <MenuItem Header="_About" Command="{Binding AboutClicked}"/>
+        </Menu>
+        <controls:SearchBox Grid.Row="1" Grid.ColumnSpan="2" x:Name="SearchBox"/>
+        <controls:TourList Grid.Row="2" Grid.RowSpan="3" x:Name="TourList"/>
+        <GroupBox Grid.Row="2" Grid.Column="1" Width="Auto" Height="Auto" Header="Current selection" Margin="5,5,5,5" Padding="5">
+            <StackPanel>
+                <TabControl Name="myTabControl" TabStripPlacement="Top" Margin="0, 0, 0, 10" MinHeight="200" VerticalAlignment="Stretch">
+                    <TabItem Name="General">
+                        <TabItem.Header>_General</TabItem.Header>
+                        <StackPanel>
+
+                        </StackPanel>
+                    </TabItem>
+                    <TabItem>
+                        <TabItem.Header>_Route</TabItem.Header>
+                        <StackPanel>
+
+                        </StackPanel>
+                    </TabItem>
+                    <TabItem Name="Misc">
+                        <TabItem.Header>_Misc</TabItem.Header>
+                        <StackPanel>
+
+                        </StackPanel>
+                    </TabItem>
+                </TabControl>
+            </StackPanel>
+        </GroupBox>
+        <controls:TourLogs Grid.Row="3" Grid.Column="1" x:Name="TourLogs" Grid.RowSpan="2"/>
+    </Grid>
+</Window>
