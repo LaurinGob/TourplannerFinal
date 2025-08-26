@@ -10,8 +10,8 @@
         <GroupBox Grid.Row="2" Grid.RowSpan="2" Grid.Column="0" Header="Tours" MinHeight="250" Margin="5">
             <StackPanel MinHeight="200">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
-                    <Button Content="+" Width="30" Margin="5" Command="{Binding AddCommand}" />
-                    <Button Content="-" Width="30" Margin="5" Command="{Binding DeleteCommand}" />
+                    <Button Content="+" Width="30" Margin="5" Command="{Binding AddTourToList}" />
+                    <Button Content="-" Width="30" Margin="5" Command="{Binding RemoveTourFromList}" />
                 </StackPanel>
                 <ListBox ItemsSource="{Binding Items}" SelectedItem="{Binding SelectedItem}" VerticalAlignment="Stretch" BorderThickness="0"/>
             </StackPanel>

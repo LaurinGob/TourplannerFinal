@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36401.2 d17.14
+VisualStudioVersion = 17.14.36401.2
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tourplanner.Business", "Tourplanner\Tourplanner.Business.csproj", "{13BC6214-5C4B-4EA9-85E9-F2A22ACD01EB}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tourplanner.Logging", "Tourplanner.Logging\Tourplanner.Logging.csproj", "{D285B424-68DD-432F-93CA-19E472958620}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tourplanner.UI", "Tourplanner.UI\Tourplanner.UI.csproj", "{5466FAA2-F165-4550-BD1D-09A7E4107A9C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tourplanner.Logging.Test", "Tourplanner.Logging.Test\Tourplanner.Logging.Test.csproj", "{E58408A7-EE76-487F-AD32-CD048935C252}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{5466FAA2-F165-4550-BD1D-09A7E4107A9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5466FAA2-F165-4550-BD1D-09A7E4107A9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5466FAA2-F165-4550-BD1D-09A7E4107A9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E58408A7-EE76-487F-AD32-CD048935C252}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E58408A7-EE76-487F-AD32-CD048935C252}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E58408A7-EE76-487F-AD32-CD048935C252}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E58408A7-EE76-487F-AD32-CD048935C252}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
