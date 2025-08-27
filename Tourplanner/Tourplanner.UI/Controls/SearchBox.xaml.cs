@@ -12,22 +12,16 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Tourplanner.UI.ViewModels;
 
 namespace Views.Controls
 {
-    /// <summary>
-    /// Interaktionslogik für SearchBox.xaml
-    /// </summary>
     public partial class SearchBox : UserControl
     {
         public SearchBox()
         {
             InitializeComponent();
-        }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
+            DataContext = new SearchBoxViewModel();
         }
     }
 }

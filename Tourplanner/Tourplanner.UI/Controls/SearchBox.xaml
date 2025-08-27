@@ -11,7 +11,7 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
-        <TextBox Padding="2" Grid.Column="0" Text="Search" TextChanged="TextBox_TextChanged"></TextBox>
-        <Button Padding="5" Grid.Column="1" Content="🔍"/>
+        <TextBox Padding="2" Grid.Column="0" Text="{Binding Query, UpdateSourceTrigger=PropertyChanged}"/>
+        <Button Padding="5" Grid.Column="1" Content="🔍" Command="{Binding SearchButtonCommand}"/>
     </Grid>
 </UserControl>
