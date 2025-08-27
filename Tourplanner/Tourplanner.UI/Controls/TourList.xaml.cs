@@ -12,17 +12,16 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Tourplanner.UI.ViewModels;
 
 namespace Views.Controls
 {
-    /// <summary>
-    /// Interaktionslogik für TourList.xaml
-    /// </summary>
     public partial class TourList : UserControl
     {
         public TourList()
         {
             InitializeComponent();
+            DataContext = new TourListViewModel();
         }
     }
 }
