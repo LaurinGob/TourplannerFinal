@@ -5,13 +5,13 @@ using Tourplanner.UI.ViewModels;
 
 namespace Tourplanner.UI.Commands
 {
-    internal class RemoveLogFromList : ICommand
+    internal class AddLogToList : ICommand
     {
         public event EventHandler? CanExecuteChanged;
 
         private TourLogsViewModel viewModel;
 
-        public RemoveLogFromList(TourLogsViewModel viewModel)
+        public AddLogToList(TourLogsViewModel viewModel)
         {
             this.viewModel = viewModel;
 
@@ -31,8 +31,8 @@ namespace Tourplanner.UI.Commands
 
         public void Execute(object? parameter)
         {
-            viewModel.RemoveClicked();
-            Trace.WriteLine("Button clicked - Remove Log");
+            viewModel.AddClicked();
+            Trace.WriteLine("Button clicked - Add Log");
         }
     }
 }
